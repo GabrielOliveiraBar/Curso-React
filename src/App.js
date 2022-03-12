@@ -1,23 +1,23 @@
-import logo from './logo.svg';
+
 import './App.css';
+import HellowWord from './components/HellowWord'
 
 function App() {
+  const name = 'Matheus'
+
+  function Sum(a,b){
+    return a+b
+  }
+
+  const url = 'https://via.placeholder.com/150'
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <h2>alterando JSX</h2>
+     <p>Meu primeiro APP.</p>
+     <p>Olá,{name}</p>
+     <p>Soma: {Sum(1,2)}</p>
+     <img src={url} alt="minha imagem" />
+     <HellowWord/>
     </div>
   );
 }
