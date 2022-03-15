@@ -1,23 +1,19 @@
 
 import './App.css';
 import HellowWord from './components/HellowWord'
+import SayMyName from './components/SayMyName'
+import Pessoa from './components/Pessoa'
 
 function App() {
-  const name = 'Matheus'
-
-  function Sum(a,b){
-    return a+b
-  }
-
-  const url = 'https://via.placeholder.com/150'
+  const nome = "Maria"
   return (
     <div className="App">
-     <h2>alterando JSX</h2>
-     <p>Meu primeiro APP.</p>
-     <p>Olá,{name}</p>
-     <p>Soma: {Sum(1,2)}</p>
-     <img src={url} alt="minha imagem" />
+     
      <HellowWord/>
+     <SayMyName nome="Gabriel"/>
+     <SayMyName nome="João"/>
+     <SayMyName nome={nome}/>
+     <Pessoa nome="Maria" idade="6" profissão = "progamadora" foto = "https://via.placeholder.com/150"/>
     </div>
   );
 }
