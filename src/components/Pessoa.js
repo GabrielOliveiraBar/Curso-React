@@ -1,12 +1,39 @@
 // {var,var,var} var dentro do props para simplificar o JSX.
-function Pessoa ({nome,idade,profissão,foto}){
+
+import PropTypes from 'prop-types'
+function Pessoa ({nome,idade,profissão}){
     return(
         <div>
-            <img src={foto} alt = {nome}/>
-            <h2>Nome: {nome}</h2>
-            <p>Idade: {idade}</p>
-            <p>Profissão:{profissão}</p>
+            
+          
+           
+           
+            <ul>
+                <li>{profissão}</li>
+                <li>{nome}</li>
+                <li>{idade}</li>
+                </ul>
+           
+    
         </div>
     )
 }
+
+Pessoa.propTypes={
+    profissão: PropTypes.string.isRequired,
+    nome: PropTypes.string,
+    idade: PropTypes.number,
+}
+
+Pessoa.defaultProps={
+    
+nome: "faltou o nome",
+
+idade:"coloque a dat agr porra",
+
+profissão:"faltou a profissão",
+
+
+}
+
 export default Pessoa
