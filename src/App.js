@@ -1,25 +1,21 @@
 
-import './App.css';
-import HellowWord from './components/HellowWord'
-import SayMyName from './components/SayMyName'
+import './App.css'
+import Form from './components/Form'
+import Eventos from './components/Eventos'
 
-import List from './components/List'
-import Teste from './components/Teste'
+
 
 function App() {
-  const nome = "Maria"
+ 
   return (
     <div className="App">
+     <h1>Testando Eventos</h1>
+     <Eventos  numero="2"/>
+     <Eventos  numero="1"/>
+     <Form/>
      
-     <HellowWord/>
-     <SayMyName nome="Gabriel"/>
-     <SayMyName nome="João"/>
-     <SayMyName nome={nome}/>
-    
-     <List/>
-     <Teste/>
     </div>
-  );
+  )
 }
 
 export default App;
