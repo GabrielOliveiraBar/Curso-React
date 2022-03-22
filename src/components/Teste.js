@@ -1,13 +1,41 @@
-import Pessoa from './Pessoa'
-function Teste (){
+import {useState} from 'react'
+
+function Form(){
+    function cadastrarUsuario(e){
+        e.preventDefault()
+        console.log(`o usuario ${name} cadastou-se com a senha ${password}`)
+        
+    }
+
+    const [name,setName] = useState()
+    const [password,setPassword] = useState()
+
     return(
-<div>
-    <h1><Pessoa nome={1915}/></h1>
-    <p><Pessoa idade= {2001}/></p>
-    <p><Pessoa profissão= "progamador"/></p>
-    <Pessoa/>
-</div>
+    <div>
+        <h1>Meu cadastro:</h1>
+        <form onSubmit={cadastrarUsuario}>
+            <div>
+                <label htmlFor="name">Nome: </label>
+                <input type="text" 
+                id="name"
+                name="name"
+                placeholder="Digite o seu nome" 
+                onChange={(e) => setName(e.target.value)}
+            />
+            
+        </div>
+        <div>
+        <label htmlFor="password">Senha: </label>
+            
+            <input type="password" id="password" name="password" placeholder="Digite sua senha" onChange={(e) => setPassword(e.target.value)}
+            />
+        </div>
+        <div>
+            <input type="submit" value="cadastrar"/>
+        </div>
+        </form>
+        </div>
     )
 }
 
-export default Teste
+export default Form
